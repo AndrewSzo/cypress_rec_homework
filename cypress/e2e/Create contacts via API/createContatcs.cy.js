@@ -7,8 +7,7 @@ describe("Creating user contacts", () => {
     const numContacts = 2;
 
     // Define your authorization token
-    const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE4NzUzNTAzMmY0NzAwMTM1MDk0ZTIiLCJpYXQiOjE2Nzk5MDQzNDV9.hw7pNid48L2jD9SekLoJc3sDMID27Y6Vr2nkpo1ii7Q";
+    const token = Cypress.env("AUTH_TOKEN");
 
     // Use a loop to create the contacts
     for (let i = 1; i <= numContacts; i++) {
