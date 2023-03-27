@@ -1,7 +1,7 @@
 // Set up a beforeEach() hook to log in to the application
 beforeEach(() => {
-  const email = "test@andrew.com";
-  const password = "Test12!@";
+  const email = Cypress.env("USER_EMAIL");
+  const password = Cypress.env("USER_PASSWORD");
 
   // Navigate to the login page
   cy.visit("/login");
